@@ -14,8 +14,6 @@ const Registrant = mongoose.model('Registrant', {
     email: String,
 });
 
-app.use(express.static(__dirname + '/public'));
-
 app.route("/")
     .get((req, res) => res.sendFile(__dirname + "/form.html"))
     .post((req, res) => {
